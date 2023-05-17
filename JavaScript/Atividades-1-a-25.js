@@ -86,8 +86,6 @@ function exercicio5() {
 
         i++
     }
-
-
 }
 
 // 6)    
@@ -159,7 +157,7 @@ function exercicio9() {
 
     somatorio100 = 0
 
-    for (let i=0; i<=100; i++) {
+    for (let i = 0; i <= 100; i++) {
         somatorio100 = somatorio100 + i
     }
 
@@ -170,14 +168,49 @@ function exercicio9() {
 // um programa que exiba a média de uma lista de números digitados pelo usuário
 // utilizando um laço "while".
 
+function exercicio10() {
+    let numero = parseInt(prompt("Digite um Numero (Zero Para Sair):"));
+    let soma = 0;
+    let cont = 0;
+    let media = 0;
+    while(numero != 0){
+        soma = soma + numero;
+        cont = cont + 1;
+        numero = parseInt(prompt("Digite um Numero (Zero Para Sair):"));
+    }
+    media = soma / cont;
+    alert(media)
+}
+
 // 11)  Escreva
 // um programa que exiba todos os múltiplos de 3 de 1 a 100 utilizando um laço
 // "for".
+
+function exercicio11() {
+    for (let i = 0; i <= 100; i++) {
+
+        if (i % 3 == 0) {
+            console.log(i)
+        }
+    }
+}
 
 
 // 12)  Escreva
 // um programa que solicite ao usuário um número e exiba a soma dos dígitos desse
 // número utilizando um laço "for".
+
+function exercicio12() {
+    let numero = document.getElementById('Exercicio12').value;
+    let somaDigito = 0;
+
+    for (let i = 0; i < numero.length; i++) {
+        
+        somaDigito += parseInt(numero[i])
+    }
+
+    document.getElementById('exc12').innerHTML = somaDigito;
+}
 
 
 // 13)  Escreva
@@ -190,25 +223,58 @@ function exercicio9() {
 // um programa que exiba que calcule a área de um retângulo com lados informados
 // pelo usuário.
 
+function exercicio14 () {
+    let baseRetangulo = parseInt(document.getElementById('BaseRetangulo').value);
+    let alturaRetangulo =parseInt(document.getElementById('AlturaRetangulo').value);
+    var area = baseRetangulo*alturaRetangulo;
+
+    document.getElementById('exc14').innerHTML = area;
+}
 
 // 15)  Escreva
 // um programa que solicite as letras de uma palavra informada pelo usuário,
 // armazene em um vetor, e através de um laço mostre quais letras são vogais e quais
 // são consoantes.
 
+
+
 // 16)  Escreva
 // um programa que calcule a área de um círculo, solicitando o raio ao usuário.
+
+function exercicio16 () {
+    let raio = parseInt(document.getElementById('raio').value);
+    let pi =Math.PI;
+    var areaCirculo = pi*raio**2;
+
+    document.getElementById('exc16').innerHTML = areaCirculo.toFixed(2);
+}
 
 
 // 17)  Escreva
 // um programa que calcule a área de um triângulo, solicitando a base e a altura
 // ao usuário.
 
+function exercicio17 () {
+    let baseTriangulo = parseInt(document.getElementById('baseTriangulo').value);
+    let alturaTriangulo = parseInt(document.getElementById('alturaTriangulo').value);
+    let areaTriangulo = (baseTriangulo*alturaTriangulo)/2;
+
+    document.getElementById('exc17').innerHTML = areaTriangulo;
+}
 
 // 18)  Escreva
 // um programa que calcule a área de um trapézio, solicitando a base maior, a base
 // menor e a altura ao usuário.
 
+
+function exercicio18 () {
+    let baseMaior = parseInt(document.getElementById('BaseMaior').value);
+    let baseMenor =parseInt(document.getElementById('BaseMenor').value);
+    let altura = parseInt(document.getElementById('Altura').value);
+    var area = ((baseMaior+baseMenor)/2)*altura;
+
+    document.getElementById('exc18').innerHTML = area;
+}
 
 // 19)  Escreva
 // um programa que substitua todas as ocorrências de uma letra em uma frase
